@@ -1158,3 +1158,13 @@ Duration = 5
 })
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Innocentallity/Scripts/main/SkinsInGame'),true))()
 end)
+
+KillingCheats:CreateButton("Redeem All Codes", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+Title = "Success",
+Text = "Redeemed All Available Codes", 
+
+Duration = 5
+})
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/qwerty-lol/redeem-all-codes/main/redeem%20every%20code%20script.lua'),true))()
+end)
