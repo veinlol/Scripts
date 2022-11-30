@@ -198,7 +198,7 @@ local function API_Check()
         _G.TeamCheck = true   -- If set to true then the script would create boxes only for the enemy team members.
         
         _G.BoxesVisible = box   -- If set to true then the boxes will be visible and vice versa.
-        _G.LineColor = Color3.fromRGB(100, 75.3, 79.6)   -- The color that the boxes would appear as.
+        _G.LineColor = Color3.fromRGB(255, 192, 254)   -- The color that the boxes would appear as.
         _G.LineThickness = 1   -- The thickness of the boxes.
         _G.LineTransparency = 0.7   -- The transparency of the boxes.
         _G.SizeIncrease = 1   -- How much the box's size is increased (The size is multiplied by the value of this variable). (1 is default, anything more then 2 is not recommended) <float> / <int>
@@ -535,7 +535,7 @@ local function API_Check()
         _G.FromBottom = true   -- If set to true, the tracers will come from the bottom of your screen.
         
         _G.TracersVisible = tracer   -- If set to true then the tracers will be visible and vice versa.
-        _G.TracerColor = Color3.fromRGB(100, 75.3, 79.6)   -- The color that the tracers would appear as.
+        _G.TracerColor = Color3.fromRGB(255, 192, 254)   -- The color that the tracers would appear as.
         _G.TracerThickness = 1   -- The thickness of the tracers.
         _G.TracerTransparency = 0.7   -- The transparency of the tracers.
         
@@ -774,7 +774,7 @@ KillingCheats:CreateToggle("Name ESP", function(name)
         _G.TeamCheck = true   -- If set to true then the script would create ESP only for the enemy team members.
         
         _G.ESPVisible = name   -- If set to true then the ESP will be visible and vice versa.
-        _G.TextColor = Color3.fromRGB(100, 75.3, 79.6)  -- The color that the boxes would appear as.
+        _G.TextColor = Color3.fromRGB(255, 192, 254)  -- The color that the boxes would appear as.
         _G.TextSize = 14   -- The size of the text.
         _G.Center = true   -- If set to true then the script would be located at the center of the label.
         _G.Outline = false   -- If set to true then the text would have an outline.
