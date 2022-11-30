@@ -1,13 +1,13 @@
 local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
 
-local PhantomForcesWindow = Library:NewWindow("Arsenal PWNERS V2")
+local PhantomForcesWindow = Library:NewWindow("Vital")
 
 local KillingCheats = PhantomForcesWindow:NewSection("Combat")
 
 KillingCheats:CreateButton("Silent Aim", function()
 game:GetService("StarterGui"):SetCore("SendNotification",{
-Title = "Silent aim has been executed",
-Text = "aim go brrrrrr", 
+Title = "Silent Aim: Enabled",
+Text = "(The only way this can be disabled is by leaving and rejoining.)", 
 
 Duration = 5
 })
@@ -56,26 +56,6 @@ MT.__index = newcclosure(function(self, K)
     return OldIDX(self, K)
 end)
 setreadonly(MT, true)
-end)
-
-KillingCheats:CreateToggle("Semi wallbang", function(wallbang)
-_G.Enable = wallbang
-local MT = getrawmetatable(game)
-local OldIndex = MT.__index
-setreadonly(MT, false)
-MT.__index = newcclosure(function(A, B)
-    if B == "Clips" then
-        if _G.Enable then
-            return workspace.Map
-        end
-    end
-    return OldIndex(A, B)
-end)
-game:GetService("UserInputService").InputBegan:Connect(function(Key, _)
-    if not _ and Key.KeyCode == Enum.KeyCode.T then
-        _G.Enable = not _G.Enable
-    end
-end)
 end)
 
 KillingCheats:CreateToggle("Aimbot", function(aimbot)
@@ -181,7 +161,7 @@ end)
 
 local KillingCheats = PhantomForcesWindow:NewSection("Visuals")
 
-KillingCheats:CreateToggle("Esp box", function(box)
+KillingCheats:CreateToggle("Box ESP", function(box)
 local function API_Check()
 
             if Drawing == nil then
@@ -196,8 +176,8 @@ local function API_Check()
         
         if Find_Required == "No" then
             game:GetService("StarterGui"):SetCore("SendNotification",{
-                Title = "An error lol";
-                Text = "Boxes script could not be loaded because your exploit is unsupported.";
+                Title = "Exploit Issue";
+                Text = "The script could not be executed due to an unsupported exploit.";
                 Duration = math.huge;
                 Button1 = "OK"
             })
@@ -492,8 +472,8 @@ local function API_Check()
         if Success and not Errored then
             if _G.SendNotifications == true then
                 game:GetService("StarterGui"):SetCore("SendNotification",{
-                    Title = "Ash01";
-                    Text = "Boxes script has successfully loaded.";
+                    Title = "Success";
+                    Text = "Box ESP: Enabled";
                     Duration = 5;
                 })
             end
@@ -1156,5 +1136,15 @@ Text = "Epic",
 
 Duration = 5
 })
-setclipboard("https://discord.gg/rQEHvHFGNf")
+setclipboard("https://discord.gg")
+end)
+
+KillingCheats:CreateButton("Unlock All Melees", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+Title = "Success",
+Text = "Unlocked All Melees", 
+
+Duration = 5
+})
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Innocentallity/Scripts/main/UNLOCK%20ALL%20MELEES%3F!%3F!%3F!%3F!%3F%20NO%20WAY%20BRO%20WTF..%3F'),true))()
 end)
