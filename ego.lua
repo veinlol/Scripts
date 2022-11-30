@@ -1146,5 +1146,5 @@ Text = "Unlocked All Melees",
 
 Duration = 5
 })
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Innocentallity/Scripts/main/UNLOCK%20ALL%20MELEES%3F!%3F!%3F!%3F!%3F%20NO%20WAY%20BRO%20WTF..%3F'),true))()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Innocentallity/Scripts/main/melees'),true))()
 end)
