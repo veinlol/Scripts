@@ -1,6 +1,6 @@
 local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
 
-local PhantomForcesWindow = Library:NewWindow("Vital")
+local PhantomForcesWindow = Library:NewWindow("Vitalware: Arsenal")
 
 local KillingCheats = PhantomForcesWindow:NewSection("Combat")
 
@@ -1129,14 +1129,14 @@ dofullbright()
 Light.LightingChanged:Connect(dofullbright)
 end)
 
-KillingCheats:CreateButton("Copy discord invite", function()
+KillingCheats:CreateButton("Discord", function()
 game:GetService("StarterGui"):SetCore("SendNotification",{
-Title = "Discord Copied to your clipboard",
-Text = "Epic", 
+Title = "Discord Copied To Your Clipboard",
+Text = "vitality#2332", 
 
 Duration = 5
 })
-setclipboard("https://discord.gg")
+setclipboard("https://discord.gg/yQumcD3tDd")
 end)
 
 KillingCheats:CreateButton("Unlock All Melees", function()
