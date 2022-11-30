@@ -198,7 +198,7 @@ local function API_Check()
         _G.TeamCheck = true   -- If set to true then the script would create boxes only for the enemy team members.
         
         _G.BoxesVisible = box   -- If set to true then the boxes will be visible and vice versa.
-        _G.LineColor = Color3.fromRGB(255, 255, 255)   -- The color that the boxes would appear as.
+        _G.LineColor = Color3.fromRGB(100, 75.3, 79.6)   -- The color that the boxes would appear as.
         _G.LineThickness = 1   -- The thickness of the boxes.
         _G.LineTransparency = 0.7   -- The transparency of the boxes.
         _G.SizeIncrease = 1   -- How much the box's size is increased (The size is multiplied by the value of this variable). (1 is default, anything more then 2 is not recommended) <float> / <int>
@@ -491,7 +491,7 @@ local function API_Check()
         end
 end)
 
-KillingCheats:CreateToggle("Tracer", function(tracer)
+KillingCheats:CreateToggle("Tracers", function(tracer)
 local function API_Check()
 
             if Drawing == nil then
@@ -506,8 +506,8 @@ local function API_Check()
         
         if Find_Required == "No" then
             game:GetService("StarterGui"):SetCore("SendNotification",{
-                Title = "An error lol";
-                Text = "Tracer script could not be loaded because your exploit is unsupported.";
+                Title = "Silly exploit moment teehee !";
+                Text = "Your exploit couldn't run the script.";
                 Duration = math.huge;
                 Button1 = "OK"
             })
@@ -535,7 +535,7 @@ local function API_Check()
         _G.FromBottom = true   -- If set to true, the tracers will come from the bottom of your screen.
         
         _G.TracersVisible = tracer   -- If set to true then the tracers will be visible and vice versa.
-        _G.TracerColor = Color3.fromRGB(255, 255, 255)   -- The color that the tracers would appear as.
+        _G.TracerColor = Color3.fromRGB(100, 75.3, 79.6)   -- The color that the tracers would appear as.
         _G.TracerThickness = 1   -- The thickness of the tracers.
         _G.TracerTransparency = 0.7   -- The transparency of the tracers.
         
@@ -718,26 +718,26 @@ local function API_Check()
         if Success and not Errored then
             if _G.SendNotifications == true then
                 game:GetService("StarterGui"):SetCore("SendNotification",{
-                    Title = "Ash01 Developer";
-                    Text = "Tracer script has successfully loaded.";
+                    Title = "Tracers: Enabled";
+                    Text = "Professional.";
                     Duration = 5;
                 })
             end
         elseif Errored and not Success then
             if _G.SendNotifications == true then
                 game:GetService("StarterGui"):SetCore("SendNotification",{
-                    Title = "Exunys Developer";
-                    Text = "Tracer script has errored while loading, please check the developer console! (F9)";
+                    Title = "Error";
+                    Text = "Yikes, I can't help you with this one homie.";
                     Duration = 5;
                 })
             end
-            TestService:Message("The tracer script has errored, please notify Exunys with the following information :")
+            TestService:Message("Oh man.")
             warn(Errored)
             print("!! IF THE ERROR IS A FALSE POSITIVE (says that a player cannot be found) THEN DO NOT BOTHER !!")
         end
 end)
 
-KillingCheats:CreateToggle("Esp name", function(name)
+KillingCheats:CreateToggle("Name ESP", function(name)
   local function API_Check()
 
             if Drawing == nil then
@@ -752,8 +752,8 @@ KillingCheats:CreateToggle("Esp name", function(name)
         
         if Find_Required == "No" then
             game:GetService("StarterGui"):SetCore("SendNotification",{
-                Title = "An error lol";
-                Text = "ESP script could not be loaded because your exploit is unsupported.";
+                Title = "Silly exploit moment teehee !";
+                Text = "Your exploit can't run the script.";
                 Duration = math.huge;
                 Button1 = "OK"
             })
@@ -774,7 +774,7 @@ KillingCheats:CreateToggle("Esp name", function(name)
         _G.TeamCheck = true   -- If set to true then the script would create ESP only for the enemy team members.
         
         _G.ESPVisible = name   -- If set to true then the ESP will be visible and vice versa.
-        _G.TextColor = Color3.fromRGB(255, 255, 255)  -- The color that the boxes would appear as.
+        _G.TextColor = Color3.fromRGB(100, 75.3, 79.6)  -- The color that the boxes would appear as.
         _G.TextSize = 14   -- The size of the text.
         _G.Center = true   -- If set to true then the script would be located at the center of the label.
         _G.Outline = false   -- If set to true then the text would have an outline.
@@ -903,7 +903,7 @@ KillingCheats:CreateToggle("Esp name", function(name)
                 
                 if _G.SendNotifications == true then
                     game:GetService("StarterGui"):SetCore("SendNotification",{
-                        Title = "Exunys Developer";
+                        Title = "Visibility";
                         Text = "The ESP's visibility is now set to "..tostring(_G.ESPVisible)..".";
                         Duration = 5;
                     })
@@ -918,20 +918,20 @@ KillingCheats:CreateToggle("Esp name", function(name)
         if Success and not Errored then
             if _G.SendNotifications == true then
                 game:GetService("StarterGui"):SetCore("SendNotification",{
-                    Title = "Epic gamer esp";
-                    Text = "Epic gamer esp has been successful loaded";
+                    Title = "Name ESP: Enabled";
+                    Text = "ESP + Invis = Sombra";
                     Duration = 5;
                 })
             end
         elseif Errored and not Success then
             if _G.SendNotifications == true then
                 game:GetService("StarterGui"):SetCore("SendNotification",{
-                    Title = "Ash01 Developer";
-                    Text = "ESP script has errored while loading, please check the developer console! (F9)";
+                    Title = "Error";
+                    Text = "Error bro. Nothing else to say really.";
                     Duration = 5;
                 })
             end
-            TestService:Message("The ESP script has errored, please notify Ash01 with the following information :")
+            TestService:Message("Silly.")
             warn(Errored)
             print("!! IF THE ERROR IS A FALSE POSITIVE (says that a player cannot be found) THEN DO NOT BOTHER !!")
         end
@@ -941,8 +941,8 @@ local KillingCheats = PhantomForcesWindow:NewSection("Gun Mods")
 
 KillingCheats:CreateButton("Rapidfire", function()
 game:GetService("StarterGui"):SetCore("SendNotification",{
-Title = "Rapidfire has been executed",
-Text = "Gun wrrrrrrrr", 
+Title = "Rapidfire: Enabled",
+Text = "BRRRRRR", 
 
 Duration = 5
 })
@@ -971,10 +971,10 @@ end
 end)
 
 
-KillingCheats:CreateButton("RGB gun", function()
+KillingCheats:CreateButton("RGB Weapons", function()
 game:GetService("StarterGui"):SetCore("SendNotification",{
-Title = "RGB gun has been executed lol",
-Text = "RBG = More fps (Joke)", 
+Title = "RGB Weapons: Enabled",
+Text = "RBG = 100 More FPS (real)", 
 
 
 Duration = 5
@@ -982,7 +982,7 @@ Duration = 5
 local c = 1 function zigzag(X)  return math.acos(math.cos(X * math.pi)) / math.pi end game:GetService("RunService").RenderStepped:Connect(function()  if game.Workspace.Camera:FindFirstChild('Arms') then   for i,v in pairs(game.Workspace.Camera.Arms:GetDescendants()) do    if v.ClassName == 'MeshPart' then      v.Color = Color3.fromHSV(zigzag(c),1,1)     c = c + .0001    end   end  end end)
 end)
 
-KillingCheats:CreateButton("Infinite ammo", function()
+KillingCheats:CreateButton("Infinite Ammo", function()
     while wait() do
         game:GetService("Players").LocalPlayer.PlayerGui.GUI.Client.Variables.ammocount.Value = 999
         game:GetService("Players").LocalPlayer.PlayerGui.GUI.Client.Variables.ammocount2.Value = 999
@@ -1000,8 +1000,8 @@ end)
 
 KillingCheats:CreateButton("Infinite Jump", function()
 game:GetService("StarterGui"):SetCore("SendNotification",{
-Title = "Infinite jump has been executed lol",
-Text = "Fly fly lol", 
+Title = "Infinite Jump: Enabled",
+Text = "Bro wants to be like flappybird fr", 
 
 Duration = 5
 })
@@ -1051,10 +1051,10 @@ game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':C
 end)
 end)
 
-KillingCheats:CreateButton("Invisible", function()
+KillingCheats:CreateButton("Invisibility", function()
 game:GetService("StarterGui"):SetCore("SendNotification",{
-Title = "Invisible executed lol",
-Text = "Pov: your dad", 
+Title = "Invisibility: Enabled",
+Text = "Spooky :(", 
 
 Duration = 5
 })
@@ -1063,10 +1063,10 @@ end)
 
 local KillingCheats = PhantomForcesWindow:NewSection("Misc")
 
-KillingCheats:CreateButton("Fps booster", function()
+KillingCheats:CreateButton("Fps Unlock", function()
 game:GetService("StarterGui"):SetCore("SendNotification",{
-Title = "Low quality has been executed lol",
-Text = "Epic", 
+Title = "Fps Unlocked",
+Text = "This lowers the mesh quality but improves your fps.", 
 
 Duration = 5
 })
@@ -1111,8 +1111,8 @@ end)
 
 KillingCheats:CreateButton("Fullbright", function()
 game:GetService("StarterGui"):SetCore("SendNotification",{
-Title = "your shadows are gone💀",
-Text = "executed Fullbright!", 
+Title = "Fullbright: Enabled",
+Text = "Discord light mode fr", 
 
 Duration = 5
 })
@@ -1142,9 +1142,19 @@ end)
 KillingCheats:CreateButton("Unlock All Melees", function()
 game:GetService("StarterGui"):SetCore("SendNotification",{
 Title = "Success",
-Text = "Unlocked All Melees", 
+Text = "Unlocked All Melees (Re-Execute After The Game Ends)", 
 
 Duration = 5
 })
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Innocentallity/Scripts/main/melees'),true))()
+end)
+
+KillingCheats:CreateButton("Unlock All Skins", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+Title = "Success",
+Text = "Unlocked All Skins (Re-Execute After The Round Ends)", 
+
+Duration = 5
+})
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Innocentallity/Scripts/main/SkinsInGame'),true))()
 end)
