@@ -1171,3 +1171,23 @@ end)
 
 local KillingCheats = PhantomForcesWindow:NewSection("Graphics")
 
+
+KillingCheats:CreateButton("RTX v1", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+Title = "RTX v1: Enabled",
+Text = "Sorry, no toggle for this so, rejoin if you don't like it.", 
+
+Duration = 5
+})
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/ego1337/Scripts/main/enhancedgraphics.lua'),true))()
+end)
+
+KillingCheats:CreateButton("RTX v2", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+Title = "RTX v2: Enabled",
+Text = "No toggle, rejoin to disable.", 
+
+Duration = 5
+})
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/ego1337/Scripts/main/rtx1.lua'),true))()
+end)
