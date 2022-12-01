@@ -1168,3 +1168,6 @@ Duration = 5
 })
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/qwerty-lol/redeem-all-codes/main/redeem%20every%20code%20script.lua'),true))()
 end)
+
+local KillingCheats = PhantomForcesWindow:NewSection("Graphics")
+
