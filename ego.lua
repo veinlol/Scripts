@@ -1061,7 +1061,96 @@ Duration = 5
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cesare0328/my-scripts/main/arsenal%20updated%20invis.lua'),true))()
 end)
 
+
+local KillingCheats = PhantomForcesWindow:NewSection("Locker")
+
+KillingCheats:CreateButton("Unlock All Melees", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+Title = "Success",
+Text = "Unlocked All Melees (Re-Execute After The Game Ends)", 
+
+Duration = 5
+})
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Innocentallity/Scripts/main/melees'),true))()
+end)
+
+KillingCheats:CreateButton("Unlock All Skins", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+Title = "Success",
+Text = "Unlocked All Skins (Re-Execute After The Round Ends)", 
+
+Duration = 5
+})
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Innocentallity/Scripts/main/SkinsInGame'),true))()
+end)
+
 local KillingCheats = PhantomForcesWindow:NewSection("Misc")
+
+KillingCheats:CreateButton("Redeem All Codes", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+Title = "Success",
+Text = "Redeemed All Available Codes", 
+
+Duration = 5
+})
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/qwerty-lol/redeem-all-codes/main/redeem%20every%20code%20script.lua'),true))()
+end)
+
+local KillingCheats = PhantomForcesWindow:NewSection("Credits")
+
+KillingCheats:CreateButton("Discord", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+Title = "Discord Copied To Your Clipboard",
+Text = "Join the discord for support, questions, issues, etc.", 
+
+Duration = 5
+})
+setclipboard("https://discord.gg/yQumcD3tDd")
+end)
+
+KillingCheats:CreateButton("This Script (Remake): vitality#2332", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+Title = "User & Tag Copied To Your Clipboard",
+Text = "Add me for support, questions, etc.", 
+
+Duration = 5
+})
+setclipboard("vitality#2332")
+end)
+
+
+KillingCheats:CreateButton("Original: Maikderninja on Github", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+Title = "Github Link Copied To Your Clipboard",
+Text = "Maikderninja is the creator of the original gui, and script.", 
+
+Duration = 5
+})
+setclipboard("https://github.com/Maikderninja/Maikderninja")
+end)
+
+local KillingCheats = PhantomForcesWindow:NewSection("Graphics")
+
+
+KillingCheats:CreateButton("RTX v1", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+Title = "RTX v1: Enabled",
+Text = "Sorry, no toggle for this so, rejoin if you don't like it.", 
+
+Duration = 5
+})
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/ego1337/Scripts/main/enhancedgraphics.lua'),true))()
+end)
+
+KillingCheats:CreateButton("RTX v2", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+Title = "RTX v2: Enabled",
+Text = "No toggle, rejoin to disable.", 
+
+Duration = 5
+})
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/ego1337/Scripts/main/rtx1.lua'),true))()
+end)
 
 KillingCheats:CreateButton("Fps Unlock", function()
 game:GetService("StarterGui"):SetCore("SendNotification",{
@@ -1127,67 +1216,4 @@ end
 dofullbright()
 
 Light.LightingChanged:Connect(dofullbright)
-end)
-
-KillingCheats:CreateButton("Discord", function()
-game:GetService("StarterGui"):SetCore("SendNotification",{
-Title = "Discord Copied To Your Clipboard",
-Text = "vitality#2332", 
-
-Duration = 5
-})
-setclipboard("https://discord.gg/yQumcD3tDd")
-end)
-
-KillingCheats:CreateButton("Unlock All Melees", function()
-game:GetService("StarterGui"):SetCore("SendNotification",{
-Title = "Success",
-Text = "Unlocked All Melees (Re-Execute After The Game Ends)", 
-
-Duration = 5
-})
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Innocentallity/Scripts/main/melees'),true))()
-end)
-
-KillingCheats:CreateButton("Unlock All Skins", function()
-game:GetService("StarterGui"):SetCore("SendNotification",{
-Title = "Success",
-Text = "Unlocked All Skins (Re-Execute After The Round Ends)", 
-
-Duration = 5
-})
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Innocentallity/Scripts/main/SkinsInGame'),true))()
-end)
-
-KillingCheats:CreateButton("Redeem All Codes", function()
-game:GetService("StarterGui"):SetCore("SendNotification",{
-Title = "Success",
-Text = "Redeemed All Available Codes", 
-
-Duration = 5
-})
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/qwerty-lol/redeem-all-codes/main/redeem%20every%20code%20script.lua'),true))()
-end)
-
-local KillingCheats = PhantomForcesWindow:NewSection("Graphics")
-
-
-KillingCheats:CreateButton("RTX v1", function()
-game:GetService("StarterGui"):SetCore("SendNotification",{
-Title = "RTX v1: Enabled",
-Text = "Sorry, no toggle for this so, rejoin if you don't like it.", 
-
-Duration = 5
-})
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/ego1337/Scripts/main/enhancedgraphics.lua'),true))()
-end)
-
-KillingCheats:CreateButton("RTX v2", function()
-game:GetService("StarterGui"):SetCore("SendNotification",{
-Title = "RTX v2: Enabled",
-Text = "No toggle, rejoin to disable.", 
-
-Duration = 5
-})
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/ego1337/Scripts/main/rtx1.lua'),true))()
 end)
