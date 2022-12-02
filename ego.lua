@@ -4,15 +4,6 @@ local PhantomForcesWindow = Library:NewWindow("Vitalware: Arsenal")
 
 local KillingCheats = PhantomForcesWindow:NewSection("Combat")
 
-
-game:GetService("StarterGui"):SetCore("SendNotification",{  
-Title = "Vitalware: Arsenal | V 1.5",     
-Text = player.Name,
-Icon = content,
-Duration = 10,
-Color = Info
-})
-
 KillingCheats:CreateButton("Silent Aim", function()
 game:GetService("StarterGui"):SetCore("SendNotification",{
 Title = "Silent Aim: Enabled",
