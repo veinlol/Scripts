@@ -3,7 +3,7 @@ local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/blood
 local PhantomForcesWindow = Library:NewWindow("Vitalware: Arsenal")
 
 game:GetService("StarterGui"):SetCore("SendNotification",{  
-Title = "B Genesis | V 1.2",     
+Title = "Vitalware: Arsenal | V 1.5",     
 Text = player.Name,
 Icon = content,
 Duration = 10,
