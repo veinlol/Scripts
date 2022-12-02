@@ -1107,7 +1107,7 @@ Color = Info
 	
 	
     --------------------------------------------------------------------
-    local RenUi = library:AddWindow("      B Genesis | V 1.2",Enum.KeyCode.Insert)
+    local RenUi = library:AddWindow("      Vitalware: Arsenal | V 1.5",Enum.KeyCode.Insert)
     --------------------------------------------------------------------
     local Main = RenUi:AddTab("Main","")
     local BloxFruit = RenUi:AddTab("Blox Fruit","")
