@@ -6,7 +6,7 @@ local thumbSize = Enum.ThumbnailSize.Size420x420
 local content, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
 
 game:GetService("StarterGui"):SetCore("SendNotification",{  
-Title = "Vitalware: Arsenal | V 1.5",     
+Title = "Vitalware | V 1.5",     
 Text = player.Name,
 Icon = content,
 Duration = 10,
@@ -1107,7 +1107,7 @@ Color = Info
 	
 	
     --------------------------------------------------------------------
-    local RenUi = library:AddWindow("      Vitalware: Arsenal | V 1.5",Enum.KeyCode.Insert)
+    local RenUi = library:AddWindow("      Vitalware: Arsenal",Enum.KeyCode.Insert)
     --------------------------------------------------------------------
     local Main = RenUi:AddTab("Main","")
     local BloxFruit = RenUi:AddTab("Blox Fruit","")
