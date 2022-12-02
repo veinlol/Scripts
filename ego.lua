@@ -2,6 +2,14 @@ local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/blood
 
 local PhantomForcesWindow = Library:NewWindow("Vitalware: Arsenal")
 
+game:GetService("StarterGui"):SetCore("SendNotification",{  
+Title = "B Genesis | V 1.2",     
+Text = player.Name,
+Icon = content,
+Duration = 10,
+Color = Info
+})
+
 local KillingCheats = PhantomForcesWindow:NewSection("Combat")
 
 KillingCheats:CreateButton("Silent Aim", function()
