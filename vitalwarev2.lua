@@ -6,7 +6,7 @@ local thumbSize = Enum.ThumbnailSize.Size420x420
 local content, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
 
 game:GetService("StarterGui"):SetCore("SendNotification",{  
-Title = "B Genesis | V 1.2",     
+Title = "Vitalware: Arsenal | V 1.5",     
 Text = player.Name,
 Icon = content,
 Duration = 10,
