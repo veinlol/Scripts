@@ -1050,7 +1050,7 @@ Color = Info
 	
 	
 	
-	Toggle.Text = "㊀" 
+	Toggle.Text = "V" 
         spawn(function()
             while wait() do
                 pcall(function()
