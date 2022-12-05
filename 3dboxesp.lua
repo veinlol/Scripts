@@ -7,20 +7,20 @@ local camera = workspace.CurrentCamera
 --// Settings:
 local on = true -- Use this if your making gui
 
-local Box_Color = Color3.fromRGB(255, 0, 0)
+local Box_Color = Color3.fromRGB(255,131,244)
 local Box_Thickness = 2
 local Box_Transparency = 1 -- 1 Visible, 0 Not Visible
 
 local Tracers = true
-local Tracer_Color = Color3.fromRGB(255, 0, 0)
+local Tracer_Color = Color3.fromRGB(255,131,244)
 local Tracer_Thickness = 2
 local Tracer_Transparency = 1 -- 1 Visible, 0 Not Visible
 
 local Autothickness = true -- Makes screen less encumbered
 
 local Team_Check = true
-local red = Color3.fromRGB(227, 52, 52)
-local green = Color3.fromRGB(88, 217, 24)
+local red = Color3.fromRGB(255,131,244)
+local green = Color3.fromRGB(255,255,255)
 
 local function NewLine()
     local line = Drawing.new("Line")
