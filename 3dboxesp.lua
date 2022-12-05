@@ -125,10 +125,6 @@ for i, v in pairs(game.Players:GetChildren()) do
 
                     --// Teamcheck:
                     if Team_Check then
-                        if v.TeamColor == player.TeamColor then
-                            for u, x in pairs(lines) do
-                                x.Color = green
-                            end
                         else 
                             for u, x in pairs(lines) do
                                 x.Color = red
@@ -265,10 +261,6 @@ game.Players.PlayerAdded:Connect(function(newplr)
 
                     --// Teamcheck:
                     if Team_Check then
-                        if newplr.TeamColor == player.TeamColor then
-                            for u, x in pairs(lines) do
-                                x.Color = green
-                            end
                         else 
                             for u, x in pairs(lines) do
                                 x.Color = red
