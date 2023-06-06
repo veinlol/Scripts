@@ -1114,7 +1114,6 @@ Color = Info
 	local Visuals = RenUi:AddTab("Visuals","")
 	local GunMods = RenUi:AddTab("Gun Mods","")
 	local Plyr = RenUi:AddTab("Player","")
-	local Locker = RenUi:AddTab("Locker","")
 	local Shaders = RenUi:AddTab("Shaders","")
 	
     --------------------------------------------------------------------
@@ -1490,30 +1489,6 @@ end)
 game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
 end)
 end)
-
-Plyr:AddButton("Invisibility", function()
-game:GetService("StarterGui"):SetCore("SendNotification",{
-Title = "Invisibility: Enabled",
-Text = "Spooky.", 
-
-Duration = 5
-})
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cesare0328/my-scripts/main/arsenal%20updated%20invis.lua'),true))()
-end)
-
-spawn(function()
-        pcall(function()
-            game:GetService("RunService").Stepped:Connect(function()
-                if _G.NoClip then
-                    for _, v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
-                        if v:IsA("BasePart") then
-                            v.CanCollide = false    
-                        end
-                    end
-                end
-            end)
-        end)
-    end)
 	
 	
 Plyr:AddToggle("No Clip",false,function(value)
@@ -1521,69 +1496,16 @@ Plyr:AddToggle("No Clip",false,function(value)
     end)
 	
 	--------------------------------------------------------------------
-Locker:AddSeperator("Locker")
-
-Locker:AddButton("Unlock All Melees", function()
-game:GetService("StarterGui"):SetCore("SendNotification",{
-Title = "Success",
-Text = "Unlocked All Melees (Re-Execute After The Game Ends)", 
-
-Duration = 5
-})
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Innocentallity/Scripts/main/melees'),true))()
-end)
-
-Locker:AddButton("Unlock All Skins", function()
-game:GetService("StarterGui"):SetCore("SendNotification",{
-Title = "Success",
-Text = "Unlocked All Skins (Re-Execute After The Round Ends)", 
-
-Duration = 5
-})
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/Innocentallity/Scripts/main/SkinsInGame'),true))()
-end)
-
-	--------------------------------------------------------------------
 Shaders:AddSeperator("Shaders")
 	
-Shaders:AddButton("Basic Shader v1", function()
+Shaders:AddButton("Shader GUI", function()
 game:GetService("StarterGui"):SetCore("SendNotification",{
-Title = "Basic Shader v1",
+Title = "Shader GUI Executed",
 Text = "Sorry, no toggle for this so, rejoin if you don't like it.", 
 
 Duration = 5
 })
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/ego1337/Scripts/main/enhancedgraphics.lua'),true))()
-end)
-
-Shaders:AddButton("Basic Shader v2", function()
-game:GetService("StarterGui"):SetCore("SendNotification",{
-Title = "Basic v2: Enabled",
-Text = "No toggle, rejoin to disable.", 
-
-Duration = 5
-})
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/ego1337/Scripts/main/rtx2.lua'),true))()
-end)
-
-Shaders:AddButton("Basic Shader v3", function()
-game:GetService("StarterGui"):SetCore("SendNotification",{
-Title = "Basic Shader v3",
-Text = "No toggle, rejoin to disable.", 
-
-Duration = 5
-})
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/ego1337/Scripts/main/rtx3.lua'),true))()
-end)
-
-Shaders:AddButton("Autumn Shader", function()
-game:GetService("StarterGui"):SetCore("SendNotification",{
-Title = "Autumn Shader",
-Text = "No toggle, rejoin to disable.", 
-
-Duration = 5
-})
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/ego1337/Scripts/main/rtx1.lua'),true))()
+loadstring(game:HttpGet(('loadstring(game:HttpGet('https://raw.githubusercontent.com/veinlol/Scripts/main/shadergui.lua'))()'),true))()
 end)
 
 	--------------------------------------------------------------------
