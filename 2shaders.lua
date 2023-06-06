@@ -5,7 +5,7 @@ getgenv().mode = "Autumn" -- Choose from Summer and Autumn (Summer looks bad ngl
 
 local a = game.Lighting
 a.Ambient = Color3.fromRGB(33, 33, 33)
-a.Brightness = 6.67
+a.Brightness = 4
 a.ColorShift_Bottom = Color3.fromRGB(0, 0, 0)
 a.ColorShift_Top = Color3.fromRGB(255, 247, 237)
 a.EnvironmentDiffuseScale = 0.105
@@ -29,7 +29,7 @@ c.TintColor = Color3.fromRGB(217, 145, 57)
 if getgenv().mode == "Summer" then
    c.TintColor = Color3.fromRGB(255, 220, 148)
 elseif getgenv().mode == "Autumn" then
-   c.TintColor = Color3.fromRGB(254, 226, 129)
+   c.TintColor = Color3.fromRGB(254, 254, 244)
 else
    warn("No mode selected!")
    print("Please select a mode")
