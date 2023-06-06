@@ -1353,6 +1353,7 @@ RunService.RenderStepped:Connect(function( ... )
         curc.Visible = false
     end
 end)
+end)
 	
 	--------------------------------------------------------------------
 Visuals:AddSeperator("Non-Toggleable ESP")
