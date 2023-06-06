@@ -6,7 +6,7 @@ local thumbSize = Enum.ThumbnailSize.Size420x420
 local content, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
 
 game:GetService("StarterGui"):SetCore("SendNotification",{  
-Title = "Vitalware | V 1.5",     
+Title = "Veinware v1.0",     
 Text = player.Name,
 Icon = content,
 Duration = 10,
@@ -1107,7 +1107,7 @@ Color = Info
 	
 	
     --------------------------------------------------------------------
-    local RenUi = library:AddWindow("      Vitalware: Arsenal",Enum.KeyCode.Insert)
+    local RenUi = library:AddWindow("      Veinware: Arsenal",Enum.KeyCode.Insert)
     --------------------------------------------------------------------
     local Main = RenUi:AddTab("Main","")
     local Combat = RenUi:AddTab("Combat","")
@@ -1147,9 +1147,9 @@ Color = Info
 	Main:AddSeperator("Credits & Info")
 
 	Main:AddLabel("")
-	local Current = Main:AddLabel("Script Credit: vitality#2332")
-	local Current = Main:AddLabel("Discord: discord.gg/veil")
-	local Current = Main:AddLabel("Github: github.com/vitality1337")
+	local Current = Main:AddLabel("Script Credit: vein#3000")
+	local Current = Main:AddLabel("Discord: discord.gg/dosage")
+	local Current = Main:AddLabel("Github: github.com/veinlol")
 	Main:AddLabel("")
 
 	Main:AddSeperator("Utilities")
@@ -1355,74 +1355,20 @@ RunService.RenderStepped:Connect(function( ... )
     end
 end)
 end)
-
-Combat:AddButton("Silent Aim", function()
-game:GetService("StarterGui"):SetCore("SendNotification",{
-Title = "Silent Aim: Enabled",
-Text = "(The only way this can be disabled is by leaving and rejoining.)", 
-
-Duration = 5
-})
-local CurrentCamera = workspace.CurrentCamera
-local Players = game.Players
-local LocalPlayer = Players.LocalPlayer
-local Mouse = LocalPlayer:GetMouse()
-function ClosestPlayer()
-    local MaxDist, Closest = math.huge
-    for I,V in pairs(Players.GetPlayers(Players)) do
-        if V == LocalPlayer then continue end
-        if V.Team == LocalPlayer then continue end
-        if not V.Character then continue end
-        local Head = V.Character.FindFirstChild(V.Character, "Head")
-        if not Head then continue end
-        local Pos, Vis = CurrentCamera.WorldToScreenPoint(CurrentCamera, Head.Position)
-        if not Vis then continue end
-        local MousePos, TheirPos = Vector2.new(workspace.CurrentCamera.ViewportSize.X / 2, workspace.CurrentCamera.ViewportSize.Y / 2), Vector2.new(Pos.X, Pos.Y)
-        local Dist = (TheirPos - MousePos).Magnitude
-        if Dist < MaxDist then
-            MaxDist = Dist
-            Closest = V
-        end
-    end
-    return Closest
-end
-local MT = getrawmetatable(game)
-local OldNC = MT.__namecall
-local OldIDX = MT.__index
-setreadonly(MT, false)
-MT.__namecall = newcclosure(function(self, ...)
-    local Args, Method = {...}, getnamecallmethod()
-    if Method == "FindPartOnRayWithIgnoreList" and not checkcaller() then
-        local CP = ClosestPlayer()
-        if CP and CP.Character and CP.Character.FindFirstChild(CP.Character, "Head") then
-            Args[1] = Ray.new(CurrentCamera.CFrame.Position, (CP.Character.Head.Position - CurrentCamera.CFrame.Position).Unit * 1000)
-            return OldNC(self, unpack(Args))
-        end
-    end
-    return OldNC(self, ...)
-end)
-MT.__index = newcclosure(function(self, K)
-    if K == "Clips" then
-        return workspace.Map
-    end
-    return OldIDX(self, K)
-end)
-setreadonly(MT, true)
-end)
 	
 	--------------------------------------------------------------------
 Visuals:AddSeperator("Non-Toggleable ESP")
 
 Visuals:AddButton("Regular Chams", function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/ego1337/Scripts/main/chams.lua"))();
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/veinlol/Scripts/main/chams.lua"))();
 end)
 
 Visuals:AddButton("Glowing Chams (No Team-Check)", function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/ego1337/Scripts/main/esp1.lua"))();
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/veinlol/Scripts/main/esp1.lua"))();
 end)
 
 Visuals:AddButton("3D Box ESP", function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/ego1337/Scripts/main/3dboxesp.lua"))();
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/veinlol/Scripts/main/3dboxesp.lua"))();
 end)
 
 Visuals:AddLabel("")
@@ -1435,7 +1381,7 @@ GunMods:AddSeperator("Mods")
 GunMods:AddButton("Rapidfire", function()
 game:GetService("StarterGui"):SetCore("SendNotification",{
 Title = "Rapidfire: Enabled",
-Text = "BRRRRRR", 
+Text = "", 
 
 Duration = 5
 })
@@ -1466,7 +1412,7 @@ end)
 GunMods:AddButton("RGB Weapons", function()
 game:GetService("StarterGui"):SetCore("SendNotification",{
 Title = "RGB Weapons: Enabled",
-Text = "RBG = 100 More FPS (real)", 
+Text = "", 
 
 
 Duration = 5
@@ -1477,7 +1423,7 @@ end)
 GunMods:AddButton("Infinite Ammo", function()
 game:GetService("StarterGui"):SetCore("SendNotification",{
 Title = "Infinite Ammo: Enabled",
-Text = "crazy fr", 
+Text = "", 
 
 
 Duration = 5
@@ -1495,7 +1441,7 @@ Plyr:AddSeperator("Main")
 Plyr:AddButton("Infinite Jump", function()
 game:GetService("StarterGui"):SetCore("SendNotification",{
 Title = "Infinite Jump: Enabled",
-Text = "Bro wants to be like flappybird fr", 
+Text = "", 
 
 Duration = 5
 })
