@@ -1380,7 +1380,7 @@ GunMods:AddSeperator("Mods")
 GunMods:AddButton("Rapidfire", function()
 game:GetService("StarterGui"):SetCore("SendNotification",{
 Title = "Rapidfire: Enabled",
-Text = "", 
+Text = "Have fun", 
 
 Duration = 5
 })
@@ -1411,7 +1411,7 @@ end)
 GunMods:AddButton("RGB Weapons", function()
 game:GetService("StarterGui"):SetCore("SendNotification",{
 Title = "RGB Weapons: Enabled",
-Text = "", 
+Text = "crazy", 
 
 
 Duration = 5
@@ -1422,7 +1422,7 @@ end)
 GunMods:AddButton("Infinite Ammo", function()
 game:GetService("StarterGui"):SetCore("SendNotification",{
 Title = "Infinite Ammo: Enabled",
-Text = "", 
+Text = "typical lol", 
 
 
 Duration = 5
@@ -1440,7 +1440,7 @@ Plyr:AddSeperator("Main")
 Plyr:AddButton("Infinite Jump", function()
 game:GetService("StarterGui"):SetCore("SendNotification",{
 Title = "Infinite Jump: Enabled",
-Text = "", 
+Text = "flappy bird", 
 
 Duration = 5
 })
@@ -1507,5 +1507,3 @@ Duration = 5
 })
 loadstring(game:HttpGet(('loadstring(game:HttpGet('https://raw.githubusercontent.com/veinlol/Scripts/main/shadergui.lua'))()'),true))()
 end)
-
-	--------------------------------------------------------------------
